@@ -16,8 +16,8 @@ app.use(express.json());
 
 const port = process.env.PORT || 8000;
 
-app.listen(port, () => {
-    console.log(`http://localhost:${port}`);
+app.listen(port,  "0.0.0.0", () => {
+    console.log(`http://localhost:${port}`, "oke");
 });
 
 app.get("/", (req, res) => {
