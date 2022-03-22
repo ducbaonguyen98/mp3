@@ -1,0 +1,30 @@
+{
+  "name": "mp3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudscraper": "^4.6.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "i": "^0.3.7",
+    "morgan": "^1.10.0",
+    "npm": "^8.5.4",
+    "request-promise": "^4.2.6",
+    "tough-cookie-file-store": "^2.0.3",
+    "zingmp3-api": "^1.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
