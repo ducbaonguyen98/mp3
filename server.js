@@ -14,8 +14,10 @@ app.use(helmet());
 app.use(express.json());
 
 
-app.listen(8000, () => {
-    console.log("http://localhost:8000");
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+    console.log(`http://localhost:${port}`);
 });
 
 app.get("/", (req, res) => {
