@@ -104,6 +104,7 @@ app.get("/song_v1/:id", async (req, res) => {
 
         const data = await ZingMp3.getStreaming(id); 
         if(data) {
+            console.log(data);
             return res.send({
                 status: "success",
                 data
@@ -111,6 +112,7 @@ app.get("/song_v1/:id", async (req, res) => {
         }    
         
     } catch (error) {
+        console.log(error);
         return res.send({
             status: "error",
             msg: error.message
