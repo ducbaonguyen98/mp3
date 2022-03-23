@@ -115,7 +115,7 @@ app.get("/song_v1/:id", async (req, res) => {
         console.log(error);
         return res.send({
             status: "error",
-            msg: error.message
+            msg: error
         })
     }
 })
