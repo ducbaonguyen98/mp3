@@ -91,6 +91,33 @@ app.get("/list-song/:id", async (req, res) => {
     
 }) 
 
+app.get("/song_v1/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        
+        if(!id) {
+            return res.send({
+                status: "error",
+                msg: "Bad request."
+            })
+        }
+
+        const data = await ZingMp3.getFullInfo(id); 
+        if(data) {
+            return res.send({
+                status: "success",
+                data
+            })
+        }    
+        
+    } catch (error) {
+        return res.send({
+            status: "error",
+            msg: error.message
+        })
+    }
+})
+
 
 app.get("/song/:id", async (req, res) => {
     try {
